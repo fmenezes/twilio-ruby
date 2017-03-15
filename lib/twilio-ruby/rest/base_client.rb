@@ -75,6 +75,7 @@ module Twilio
         set_up_ssl
         @connection.open_timeout = @config.timeout
         @connection.read_timeout = @config.timeout
+        @connection.keep_alive_timeout = 60
       end
 
       ##
